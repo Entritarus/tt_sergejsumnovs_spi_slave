@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2025 Sergejs Umnovs
  * SPDX-License-Identifier: Apache-2.0
  */
 
