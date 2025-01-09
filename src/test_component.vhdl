@@ -26,6 +26,6 @@ begin
 
   ctr_next <= ctr_reg + 1;
 
-  o_ctr <= slv(ctr_reg);
+  o_ctr <= std_logic_vector(ctr_reg);
 
 end architecture;
