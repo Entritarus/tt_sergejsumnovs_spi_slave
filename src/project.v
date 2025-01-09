@@ -16,7 +16,7 @@ module tt_um_sergejsumnovs_spi_slave (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  test_component(clk, rst_n, uo_out);
+  test_component tc (clk, rst_n, uo_out);
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_out = 0;
   assign uio_oe  = 0;
