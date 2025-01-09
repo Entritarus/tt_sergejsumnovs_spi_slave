@@ -11,7 +11,7 @@ entity test_component is
 end entity;
 
 architecture RTL of test_component is
-  signal ctr_reg, ctr_next : std_logic_vector(o_ctr'range) := (others => '0');
+  signal ctr_reg, ctr_next : unsigned(o_ctr'range) := (others => '0');
 begin
   process(clk, rst) is
   begin
@@ -26,6 +26,6 @@ begin
 
   ctr_next <= ctr_reg + 1;
 
-  o_ctr <= ctr_reg;
+  o_ctr <= slv(ctr_reg);
 
 end architecture;
