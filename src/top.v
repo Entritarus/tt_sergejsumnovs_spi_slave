@@ -5,6 +5,8 @@
 
 `default_nettype none
 
+// just a stub to keep the TT tools happy
+
 module tt_um_sergejsumnovs_spi_slave (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -16,16 +18,5 @@ module tt_um_sergejsumnovs_spi_slave (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  test_component tc (clk, rst_n, uo_out);
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uio_out = 0;
-  assign uio_oe  = 0;
-
-  //assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, ui_in, uio_in, uio_out, uio_oe, 1'b0};
-
-  
 
 endmodule
